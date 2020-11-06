@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="test_cam_TB_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_cam_TB" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="35001000001fs"></ZoomEndTime>
+      <Cursor1Time time="35001000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="205"></NameColumnWidth>
+      <ValueColumnWidth column_width="111"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="28" />
+   <wvobject fp_name="/test_cam_TB/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/pclk" type="logic">
+      <obj_property name="ElementShortName">pclk</obj_property>
+      <obj_property name="ObjectShortName">pclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/CAM_vsync" type="logic">
+      <obj_property name="ElementShortName">CAM_vsync</obj_property>
+      <obj_property name="ObjectShortName">CAM_vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/CAM_href" type="logic">
+      <obj_property name="ElementShortName">CAM_href</obj_property>
+      <obj_property name="ObjectShortName">CAM_href</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/CAM_px_data" type="array">
+      <obj_property name="ElementShortName">CAM_px_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CAM_px_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/VGA_Hsync_n" type="logic">
+      <obj_property name="ElementShortName">VGA_Hsync_n</obj_property>
+      <obj_property name="ObjectShortName">VGA_Hsync_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/VGA_Vsync_n" type="logic">
+      <obj_property name="ElementShortName">VGA_Vsync_n</obj_property>
+      <obj_property name="ObjectShortName">VGA_Vsync_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/VGA_R" type="array">
+      <obj_property name="ElementShortName">VGA_R[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_R[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/VGA_G" type="array">
+      <obj_property name="ElementShortName">VGA_G[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_G[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/VGA_B" type="array">
+      <obj_property name="ElementShortName">VGA_B[3:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_B[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/CAM_xclk" type="logic">
+      <obj_property name="ElementShortName">CAM_xclk</obj_property>
+      <obj_property name="ObjectShortName">CAM_xclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/CAM_pwdn" type="logic">
+      <obj_property name="ElementShortName">CAM_pwdn</obj_property>
+      <obj_property name="ObjectShortName">CAM_pwdn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/CAM_reset" type="logic">
+      <obj_property name="ElementShortName">CAM_reset</obj_property>
+      <obj_property name="ObjectShortName">CAM_reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/data_mem" type="array">
+      <obj_property name="ElementShortName">data_mem[11:0]</obj_property>
+      <obj_property name="ObjectShortName">data_mem[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/DP_RAM_addr_in" type="array">
+      <obj_property name="ElementShortName">DP_RAM_addr_in[14:0]</obj_property>
+      <obj_property name="ObjectShortName">DP_RAM_addr_in[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/DP_RAM_data_in" type="array">
+      <obj_property name="ElementShortName">DP_RAM_data_in[11:0]</obj_property>
+      <obj_property name="ObjectShortName">DP_RAM_data_in[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/DP_RAM_addr_out" type="array">
+      <obj_property name="ElementShortName">DP_RAM_addr_out[14:0]</obj_property>
+      <obj_property name="ObjectShortName">DP_RAM_addr_out[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/img_generate" type="logic">
+      <obj_property name="ElementShortName">img_generate</obj_property>
+      <obj_property name="ObjectShortName">img_generate</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/line_cnt" type="array">
+      <obj_property name="ElementShortName">line_cnt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">line_cnt[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/row_cnt" type="array">
+      <obj_property name="ElementShortName">row_cnt[9:0]</obj_property>
+      <obj_property name="ObjectShortName">row_cnt[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/f" type="array">
+      <obj_property name="ElementShortName">f[31:0]</obj_property>
+      <obj_property name="ObjectShortName">f[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/clk_w" type="logic">
+      <obj_property name="ElementShortName">clk_w</obj_property>
+      <obj_property name="ObjectShortName">clk_w</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/d" type="array">
+      <obj_property name="ElementShortName">d[671:0]</obj_property>
+      <obj_property name="ObjectShortName">d[671:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/TAM_LINE" type="array">
+      <obj_property name="ElementShortName">TAM_LINE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TAM_LINE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/TAM_ROW" type="array">
+      <obj_property name="ElementShortName">TAM_ROW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">TAM_ROW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/BLACK_TAM_LINE" type="array">
+      <obj_property name="ElementShortName">BLACK_TAM_LINE[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BLACK_TAM_LINE[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam_TB/BLACK_TAM_ROW" type="array">
+      <obj_property name="ElementShortName">BLACK_TAM_ROW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BLACK_TAM_ROW[31:0]</obj_property>
+   </wvobject>
+</wave_config>
