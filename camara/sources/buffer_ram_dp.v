@@ -5,7 +5,7 @@ module buffer_ram_dp#(
 	// Absolute address in Esteban's computer
 	//parameter imageFILE = "/home/esteban/UNAL/AnalogElectrinicsII/Practices/camara/sources/imagen.men")
 	// Absolute address in Niko's computer
-	 parameter imageFILE = "D:/UNAL/semester7/Digital/camara/sources/imagen.men")
+	 parameter imageFILE = "D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/imagen.men")
 
 	(
 	input clk_w,     		 // Frecuencia de toma de datos de cada pixel.

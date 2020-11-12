@@ -76,13 +76,21 @@ assign CAM_reset = 0;			// Reset cÃ¡mara.
   el bloque genera un reloj de 25Mhz usado para el VGA  y un reloj de 24 MHz
   utilizado para la camara , a partir de una frecuencia de 100 Mhz que corresponde a la Nexys 4
 **************************************************************************** */
-
-	clk24_25_altera_cyclone	clk25_24 (
-	.areset ( rst ),	// reset
-	.inclk0 ( clk ),	// 100 Mhz
+/* Para la Nexys 4 con clk=100 MHz
+	clk24_25_nexys4 clk25_24(
+	.clk24M(clk24M), //24Mhz usado para el VGA
+	.clk25M(clk25M),//25Mhz usado para el VGA
+	.reset(rst), // rst
+	.clk100M(clk) // 100 Mhz
+	);
+*/
+	//Para la tarjeta de desarrollo altera_cyclone_iv con clk=50 MHz
+	clk25_24_altera_cyclone_iv clk25_24(
+	.inclk0 ( clk ),	// 50 Mhz
 	.c0 ( clk25M ),	//25Mhz usado para el VGA
 	.c1 ( clk24M )	//24Mhz usado para el VGA
 	);
+
 
 
 /* ****************************************************************************

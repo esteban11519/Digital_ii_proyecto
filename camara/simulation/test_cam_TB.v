@@ -65,7 +65,7 @@ localparam d="D:/UNAL/semester6/digitali/proyecto/wp2-simulacion-captura-grupo-0
 		img_generate=1;			// Estaban pegados
 	end
 
-	always #0.5 clk  = ~clk; // Cada 0.5 unidades de tiempo, cambia a su estado opuesto, reloj.
+	always #1 clk  = ~clk; // Cada 0.5 unidades de tiempo, cambia a su estado opuesto, reloj.
  	always #2 pclk  = ~pclk;
 
 

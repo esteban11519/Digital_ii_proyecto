@@ -1,5 +1,4 @@
 # Reading pref.tcl
-# ERROR: No extended dataflow license exists
 # do camera_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -11,84 +10,84 @@
 # Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/camara/sources/PLL {D:/UNAL/semester7/Digital/camara/sources/PLL/clk24_25_altera_cyclone.v}
+# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/PLL {D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/PLL/clk25_24_altera_cyclone_iv.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:26:03 on Nov 08,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/camara/sources/PLL" D:/UNAL/semester7/Digital/camara/sources/PLL/clk24_25_altera_cyclone.v 
-# -- Compiling module clk24_25_altera_cyclone
+# Start time: 20:02:56 on Nov 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/PLL" D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/PLL/clk25_24_altera_cyclone_iv.v 
+# -- Compiling module clk25_24_altera_cyclone_iv
 # 
 # Top level modules:
-# 	clk24_25_altera_cyclone
-# End time: 22:26:03 on Nov 08,2020, Elapsed time: 0:00:00
+# 	clk25_24_altera_cyclone_iv
+# End time: 20:02:56 on Nov 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/camara/sources {D:/UNAL/semester7/Digital/camara/sources/VGA_driver.v}
+# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources {D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/VGA_driver.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:26:03 on Nov 08,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/camara/sources" D:/UNAL/semester7/Digital/camara/sources/VGA_driver.v 
+# Start time: 20:02:56 on Nov 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources" D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/VGA_driver.v 
 # -- Compiling module VGA_Driver
 # 
 # Top level modules:
 # 	VGA_Driver
-# End time: 22:26:03 on Nov 08,2020, Elapsed time: 0:00:00
+# End time: 20:02:56 on Nov 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/camara/sources {D:/UNAL/semester7/Digital/camara/sources/test_cam.v}
+# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources {D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/test_cam.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:26:03 on Nov 08,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/camara/sources" D:/UNAL/semester7/Digital/camara/sources/test_cam.v 
+# Start time: 20:02:56 on Nov 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources" D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/test_cam.v 
 # -- Compiling module test_cam
 # 
 # Top level modules:
 # 	test_cam
-# End time: 22:26:03 on Nov 08,2020, Elapsed time: 0:00:00
+# End time: 20:02:56 on Nov 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/camara/sources {D:/UNAL/semester7/Digital/camara/sources/cam_read.v}
+# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources {D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/cam_read.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:26:03 on Nov 08,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/camara/sources" D:/UNAL/semester7/Digital/camara/sources/cam_read.v 
+# Start time: 20:02:57 on Nov 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources" D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/cam_read.v 
 # -- Compiling module cam_read
 # 
 # Top level modules:
 # 	cam_read
-# End time: 22:26:04 on Nov 08,2020, Elapsed time: 0:00:01
+# End time: 20:02:57 on Nov 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/camara/sources {D:/UNAL/semester7/Digital/camara/sources/buffer_ram_dp.v}
+# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources {D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/buffer_ram_dp.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:26:04 on Nov 08,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/camara/sources" D:/UNAL/semester7/Digital/camara/sources/buffer_ram_dp.v 
+# Start time: 20:02:57 on Nov 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources" D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/buffer_ram_dp.v 
 # -- Compiling module buffer_ram_dp
 # 
 # Top level modules:
 # 	buffer_ram_dp
-# End time: 22:26:04 on Nov 08,2020, Elapsed time: 0:00:00
+# End time: 20:02:57 on Nov 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/camara/db {D:/UNAL/semester7/Digital/camara/db/clk24_25_altera_cyclone_altpll.v}
+# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/db {D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/db/clk25_24_altera_cyclone_iv_altpll.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:26:04 on Nov 08,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/camara/db" D:/UNAL/semester7/Digital/camara/db/clk24_25_altera_cyclone_altpll.v 
-# -- Compiling module clk24_25_altera_cyclone_altpll
+# Start time: 20:02:57 on Nov 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/db" D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/db/clk25_24_altera_cyclone_iv_altpll.v 
+# -- Compiling module clk25_24_altera_cyclone_iv_altpll
 # 
 # Top level modules:
-# 	clk24_25_altera_cyclone_altpll
-# End time: 22:26:04 on Nov 08,2020, Elapsed time: 0:00:00
+# 	clk25_24_altera_cyclone_iv_altpll
+# End time: 20:02:57 on Nov 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/camara/simulation {D:/UNAL/semester7/Digital/camara/simulation/test_cam_TB.v}
+# vlog -vlog01compat -work work +incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/simulation {D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/simulation/test_cam_TB.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 22:26:04 on Nov 08,2020
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/camara/simulation" D:/UNAL/semester7/Digital/camara/simulation/test_cam_TB.v 
+# Start time: 20:02:57 on Nov 11,2020
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/simulation" D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/simulation/test_cam_TB.v 
 # -- Compiling module test_cam_TB
 # 
 # Top level modules:
 # 	test_cam_TB
-# End time: 22:26:04 on Nov 08,2020, Elapsed time: 0:00:00
+# End time: 20:02:57 on Nov 11,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  test_cam_TB
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" test_cam_TB 
-# Start time: 22:26:04 on Nov 08,2020
+# Start time: 20:02:57 on Nov 11,2020
 # Loading work.test_cam_TB
 # Loading work.test_cam
-# Loading work.clk24_25_altera_cyclone
+# Loading work.clk25_24_altera_cyclone_iv
 # Loading altera_mf_ver.altpll
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.pll_iobuf
@@ -99,41 +98,14 @@
 # Loading altera_mf_ver.cda_m_cntr
 # Loading altera_mf_ver.cda_n_cntr
 # Loading altera_mf_ver.cda_scale_cntr
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'clk25_24'.  Expected 5, found 4.
-#    Time: 0 ps  Iteration: 0  Instance: /test_cam_TB/uut/clk25_24 File: D:/UNAL/semester7/Digital/camara/sources/test_cam.v Line: 80
-# ** Warning: (vsim-3722) D:/UNAL/semester7/Digital/camara/sources/test_cam.v(80): [TFMPC] - Missing connection for port 'locked'.
 # 
 # add wave *
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
-# run 16 ms
-# ** Error (suppressible): (vsim-8604) $MODEL_TECH/../altera/verilog/src/altera_mf.v(15820): NaN (not a number) resulted from a division operation.
-# ** Error (suppressible): (vsim-8604) $MODEL_TECH/../altera/verilog/src/altera_mf.v(15820): NaN (not a number) resulted from a division operation.
-# ** Error (suppressible): (vsim-8604) $MODEL_TECH/../altera/verilog/src/altera_mf.v(15820): NaN (not a number) resulted from a division operation.
-# ** Error (suppressible): (vsim-8604) $MODEL_TECH/../altera/verilog/src/altera_mf.v(15820): NaN (not a number) resulted from a division operation.
-# ** Error (suppressible): (vsim-8604) $MODEL_TECH/../altera/verilog/src/altera_mf.v(15820): NaN (not a number) resulted from a division operation.
-# ** Error (suppressible): (vsim-8604) $MODEL_TECH/../altera/verilog/src/altera_mf.v(15820): NaN (not a number) resulted from a division operation.
-#  Note : Cyclone IV E PLL was reset
-# Time: 0  Instance: test_cam_TB.uut.clk25_24.altpll_component.cycloneiii_pll.pll3
-#############  Autofindloop Analysis  ###############
-#############  Loop found at time 200 ns ###############
-#   Active process: /test_cam_TB/uut/clk25_24/altpll_component/cycloneiii_pll/pll3/#ALWAYS#17572 @ sub-iteration 0
-#     Source: $MODEL_TECH/../altera/verilog/src/altera_mf.v:23412
-#   Active process: /test_cam_TB/uut/clk25_24/altpll_component/cycloneiii_pll/pll3/#ALWAYS#17572 @ sub-iteration 1
-#     Source: $MODEL_TECH/../altera/verilog/src/altera_mf.v:23412
-#   Active process: /test_cam_TB/uut/clk25_24/altpll_component/cycloneiii_pll/pll3/#ALWAYS#17572 @ sub-iteration 2
-#     Source: $MODEL_TECH/../altera/verilog/src/altera_mf.v:23412
-################# END OF LOOP #################
-# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 200 ns.
-######## Additional Loop Analysis Started ##########
-##############  Autofindloop Step ##################
-#   Active process: /test_cam_TB/uut/clk25_24/altpll_component/cycloneiii_pll/pll3/#ALWAYS#17572
-#     Source: $MODEL_TECH/../altera/verilog/src/altera_mf.v:23412
-###################################################
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-# End time: 22:30:49 on Nov 08,2020, Elapsed time: 0:04:45
-# Errors: 7, Warnings: 2
+# run 1000 ns
+#  Note : Cyclone IV E PLL locked to incoming clock
+# Time: 90000  Instance: test_cam_TB.uut.clk25_24.altpll_component.cycloneiii_pll.pll3
+# End time: 20:03:34 on Nov 11,2020, Elapsed time: 0:00:37
+# Errors: 0, Warnings: 0

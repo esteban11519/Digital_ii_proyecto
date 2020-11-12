@@ -1,23 +1,23 @@
 |test_cam
 clk => clk.IN1
-rst => rst.IN3
-VGA_Hsync_n << VGA_Driver:VGA_640x480.Hsync_n
-VGA_Vsync_n << VGA_Driver:VGA_640x480.Vsync_n
-VGA_R[0] << VGA_Driver:VGA_640x480.pixelOut
-VGA_R[1] << VGA_Driver:VGA_640x480.pixelOut
-VGA_R[2] << VGA_Driver:VGA_640x480.pixelOut
-VGA_R[3] << VGA_Driver:VGA_640x480.pixelOut
-VGA_G[0] << VGA_Driver:VGA_640x480.pixelOut
-VGA_G[1] << VGA_Driver:VGA_640x480.pixelOut
-VGA_G[2] << VGA_Driver:VGA_640x480.pixelOut
-VGA_G[3] << VGA_Driver:VGA_640x480.pixelOut
-VGA_B[0] << VGA_Driver:VGA_640x480.pixelOut
-VGA_B[1] << VGA_Driver:VGA_640x480.pixelOut
-VGA_B[2] << VGA_Driver:VGA_640x480.pixelOut
-VGA_B[3] << VGA_Driver:VGA_640x480.pixelOut
-CAM_xclk << clk24_25_altera_cyclone:clk25_24.c1
-CAM_pwdn << <GND>
-CAM_reset << <GND>
+rst => rst.IN2
+VGA_Hsync_n <= VGA_Driver:VGA_640x480.Hsync_n
+VGA_Vsync_n <= VGA_Driver:VGA_640x480.Vsync_n
+VGA_R[0] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_R[1] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_R[2] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_R[3] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_G[0] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_G[1] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_G[2] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_G[3] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_B[0] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_B[1] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_B[2] <= VGA_Driver:VGA_640x480.pixelOut
+VGA_B[3] <= VGA_Driver:VGA_640x480.pixelOut
+CAM_xclk <= clk25_24_altera_cyclone_iv:clk25_24.c1
+CAM_pwdn <= <GND>
+CAM_reset <= <GND>
 CAM_pclk => CAM_pclk.IN2
 CAM_href => CAM_href.IN1
 CAM_vsync => CAM_vsync.IN1
@@ -31,21 +31,19 @@ CAM_px_data[6] => CAM_px_data[6].IN1
 CAM_px_data[7] => CAM_px_data[7].IN1
 
 
-|test_cam|clk24_25_altera_cyclone:clk25_24
-areset => areset.IN1
+|test_cam|clk25_24_altera_cyclone_iv:clk25_24
 inclk0 => sub_wire1[0].IN1
 c0 <= altpll:altpll_component.clk
 c1 <= altpll:altpll_component.clk
-locked <= altpll:altpll_component.locked
 
 
-|test_cam|clk24_25_altera_cyclone:clk25_24|altpll:altpll_component
-inclk[0] => clk24_25_altera_cyclone_altpll:auto_generated.inclk[0]
-inclk[1] => clk24_25_altera_cyclone_altpll:auto_generated.inclk[1]
+|test_cam|clk25_24_altera_cyclone_iv:clk25_24|altpll:altpll_component
+inclk[0] => clk25_24_altera_cyclone_iv_altpll:auto_generated.inclk[0]
+inclk[1] => clk25_24_altera_cyclone_iv_altpll:auto_generated.inclk[1]
 fbin => ~NO_FANOUT~
 pllena => ~NO_FANOUT~
 clkswitch => ~NO_FANOUT~
-areset => clk24_25_altera_cyclone_altpll:auto_generated.areset
+areset => ~NO_FANOUT~
 pfdena => ~NO_FANOUT~
 clkena[0] => ~NO_FANOUT~
 clkena[1] => ~NO_FANOUT~
@@ -86,7 +84,7 @@ enable1 <= <GND>
 enable0 <= <GND>
 activeclock <= <GND>
 clkloss <= <GND>
-locked <= clk24_25_altera_cyclone_altpll:auto_generated.locked
+locked <= <GND>
 scandataout <= <GND>
 scandone <= <GND>
 sclkout0 <= <GND>
@@ -99,9 +97,7 @@ fref <= <GND>
 icdrclk <= <GND>
 
 
-|test_cam|clk24_25_altera_cyclone:clk25_24|altpll:altpll_component|clk24_25_altera_cyclone_altpll:auto_generated
-areset => pll_lock_sync.ACLR
-areset => pll1.ARESET
+|test_cam|clk25_24_altera_cyclone_iv:clk25_24|altpll:altpll_component|clk25_24_altera_cyclone_iv_altpll:auto_generated
 clk[0] <= pll1.CLK
 clk[1] <= pll1.CLK1
 clk[2] <= pll1.CLK2
@@ -109,7 +105,6 @@ clk[3] <= pll1.CLK3
 clk[4] <= pll1.CLK4
 inclk[0] => pll1.CLK
 inclk[1] => pll1.CLK1
-locked <= locked.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |test_cam|cam_read:cam_read
