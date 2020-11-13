@@ -10,3 +10,4 @@ En el archivo ~camara/sources/buffer_ram_dp.v pongan la *dirección absoluta* de
 
 Asegúrense se cambiar los *backslash* en los que Windows proporciona las direcciones por *slash*.
 
+En el [vga-simulator](https://ericeastwood.com/lab/vga-simulator/) se puede subir el archivo test_cam.txt para verificar simulaciones.

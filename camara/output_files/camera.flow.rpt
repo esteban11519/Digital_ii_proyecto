@@ -1,5 +1,5 @@
 Flow report for camera
-Wed Nov 11 20:02:40 2020
+Fri Nov 13 10:21:33 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Nov 11 20:02:40 2020       ;
+; Flow Status                        ; Successful - Fri Nov 13 10:21:33 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; camera                                      ;
 ; Top-level Entity Name              ; test_cam                                    ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/11/2020 20:02:16 ;
+; Start date & time ; 11/13/2020 10:21:03 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; camera              ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 193569105478883.160514293504900        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 193569105478883.160528086213012        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; uut                                    ; --            ; --          ; test_cam_TB                       ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -109,8 +109,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4799 MB             ; 00:00:36                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Synthesis ; 00:00:29     ; 1.0                     ; 4799 MB             ; 00:00:37                           ;
+; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:37                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

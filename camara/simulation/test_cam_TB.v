@@ -23,7 +23,7 @@ module test_cam_TB;
 
     // Senales de prueba ******************************
 // Absolute Address in Esteban's computer
-localparam d="D:/UNAL/semester6/digitali/proyecto/wp2-simulacion-captura-grupo-03/src/test_vga.txt";
+localparam d="D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/test_vga.txt";
 // Absolute address in Niko's computer
 // localparam d="C:/Users/LucasTheKitten/Desktop/Captura/wp2-simulacion-captura-grupo-03/src/test_vga.txt";	
 // Absolute address in Niko's mac computer
@@ -65,7 +65,12 @@ localparam d="D:/UNAL/semester6/digitali/proyecto/wp2-simulacion-captura-grupo-0
 		img_generate=1;			// Estaban pegados
 	end
 
-	always #1 clk  = ~clk; // Cada 0.5 unidades de tiempo, cambia a su estado opuesto, reloj.
+	//Reloj de 100 kHz
+	//always #0.5 clk  = ~clk; // Cada 1 unidad de tiempo cambia a su estado opuesto, proporcionando un un relo.
+
+	//Reloj de 50 kHz
+	always #1 clk  = ~clk; // Cada 1 unidad de tiempo cambia a su estado opuesto, proporcionando un un relo.
+	
  	always #2 pclk  = ~pclk;
 
 
@@ -153,24 +158,24 @@ reg cont=0;
 */
 
 
-// Azul y verde cada dos pixeles.
+// Rojo.
 	reg [2:0]cont=0;   
 
     initial forever  begin
 		@(negedge pclk) begin
-            if(~CAM_href) cont=0;			// Cada vez que termina una fila Negro. 
+            if(~CAM_href) cont=0;			
 
-            if(cont==0|cont==2) begin		// First byte Black
+            if(cont==0|cont==2) begin		
                 CAM_px_data<=8'h0;
             end
-            else if(cont==1|cont==3) begin	// Second byte blue.
+            else if(cont==1|cont==3) begin	
                 CAM_px_data<=8'h0f;
             end
-            else if(cont==4|cont==6) begin	// Black first byte.
+            else if(cont==4|cont==6) begin	
                 CAM_px_data<=8'h00;
             end
-            else if(cont==5|cont==7) begin	// Green second byte.
-                CAM_px_data<=8'hf0;
+            else if(cont==5|cont==7) begin	
+                CAM_px_data<=8'h0f;
             end
 			cont=cont+1;
          end

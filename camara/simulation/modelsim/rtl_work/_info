@@ -10,14 +10,14 @@ z2
 cModel Technology
 Z0 dD:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/simulation/modelsim
 vbuffer_ram_dp
-Z1 !s110 1605142977
+Z1 !s110 1605287515
 !i10b 1
 !s100 ^Q=kJGkE;:06dGRBDlZLD2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
 IJ8l73K:OZM;mIdnhB<JUd1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1605139156
+w1605287201
 8D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/buffer_ram_dp.v
 FD:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/buffer_ram_dp.v
 !i122 4
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1605142977.000000
+Z5 !s108 1605287515.000000
 !s107 D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/buffer_ram_dp.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources|D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/buffer_ram_dp.v|
 !i113 1
@@ -58,7 +58,7 @@ R6
 R7
 R8
 vclk25_24_altera_cyclone_iv
-Z9 !s110 1605142976
+Z9 !s110 1605287514
 !i10b 1
 !s100 Q1d;4S_oam[j>BMK[2n>W0
 R2
@@ -74,7 +74,7 @@ R4
 r1
 !s85 0
 31
-Z10 !s108 1605142976.000000
+Z10 !s108 1605287514.000000
 !s107 D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/PLL/clk25_24_altera_cyclone_iv.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/PLL|D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/sources/PLL/clk25_24_altera_cyclone_iv.v|
 !i113 1
@@ -132,16 +132,16 @@ R8
 vtest_cam_TB
 R1
 !i10b 1
-!s100 ^kn_>19bHh1_b;D]O]BTE2
+!s100 d<]O^MM`i^IV?6NF7?c5F3
 R2
-I8onGFT3FMhlg4P]S6N6EW0
+Ii9YNLnmP^<g4Z46nSk:iz2
 R3
 R0
-w1605139167
+w1605287430
 8D:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/simulation/test_cam_TB.v
 FD:/UNAL/semester7/Digital/Digital_ii_proyecto/camara/simulation/test_cam_TB.v
 !i122 6
-L0 2 264
+L0 2 269
 R4
 r1
 !s85 0
