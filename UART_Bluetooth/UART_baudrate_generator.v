@@ -12,7 +12,7 @@ module UART_BaudRate_generator(
     BaudRate
     );
 
-input           Clk                 ; // Clock input
+input           Clk                 ; // Entrada Reloj
 input           Rst_n               ; // Reset input
 input [15:0]    BaudRate            ; // Value to divide the generator by
 output          Tick                ; // Each "BaudRate" pulses we create a tick pulse
