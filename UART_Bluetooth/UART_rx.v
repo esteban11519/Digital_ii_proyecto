@@ -1,78 +1,60 @@
-module UART_rs232_rx (Clk,Rst_n,RxEn,RxData,RxDone,Rx,Tick,NBits);		//Define my module as UART_rs232_rx
+module UART_rs232_rx (Clk,Rst_n,RxEn,RxData,RxDone,Rx,Tick,NBits);		//Definimos el modulo UART_rs232_rx (Destinado para Recepción)
 
-input Clk, Rst_n, RxEn,Rx,Tick;		//Define 1 bit inputs
-input [3:0]NBits;			//Define 4 bits inputs
+input Clk, Rst_n, RxEn,Rx,Tick;		//Definimos las entradas
+input [3:0]NBits;		    //Bits recibidos
 
-
-output RxDone;				//Define 1 bit output
-output [7:0]RxData;			//Define 8 bits output (this will eb the 1byte received data)
-
-
-//Variabels used for state machine...
-parameter  IDLE = 1'b0, READ = 1'b1; 	//We haev 2 states for the State Machine state 0 and 1 (READ adn IDLE)
-reg [1:0] State, Next;			//Create some registers for the states
-reg  read_enable = 1'b0;		//Variable that will enable or NOT the data in read
-reg  start_bit = 1'b1;			//Variable used to notify when the start bit was detected (first falling edge of RX)
-reg  RxDone = 1'b0;			//Variable used to notify when the data read process is done
-reg [4:0]Bit = 5'b00000;		//Variable used for the bit by bit read loop (in this case 8 bits so 8 loops)
-reg [3:0] counter = 4'b0000;		//Counter variable used to count the tick pulses up to 16
-reg [7:0] Read_data= 8'b00000000;	//Register where we store the Rx input bits before assigning it to the RxData output
-reg [7:0] RxData;			//We register the output as well so we store the value
+output RxDone;		    // Definimos las salidas
+output [7:0]RxData;	    // Salida de 8 bits (Este es el dato recibido de 1 byte)
 
 
+// Variables para maquina de estado
+parameter  IDLE = 1'b0, READ = 1'b1; 	//Tenemos dos estados (READ y IDLE)
+reg [1:0] State, Next;			//Creamos algunos registros auxilares
+reg  read_enable = 1'b0;		//Variable habilitara o no el dato de lectura
+reg  start_bit = 1'b1;			//Variable notificara la detección del bit de inicio (el primer flanco de bajada de RX)
+reg  RxDone = 1'b0;		        //Variable notificara cuando el proceso de lectura este hecho
+reg [4:0]Bit = 5'b00000;		//Variable usada para el ciclo de lectura bit a bit (como son 8 bits son 8 ciclos)
+reg [3:0] counter = 4'b0000;          //Variable usada para contar los ciclos de tick hasta 16
+reg [7:0] Read_data= 8'b00000000;      //Registro para almacenamos los bit de entrada de RX, antes de asignarlo por completo a la salida RX
+reg [7:0] RxData;			//Registro para almacenar la salida RX
 
 
+///////////////////////////////Maquina de Estados////////////////////////////////
 
-///////////////////////////////STATE MACHINE////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////Reset////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-always @ (posedge Clk or negedge Rst_n)			//It is good to always have a reset always
+////////////////////////////////////Reset////////////////////////////////////////////
+
+	always @ (posedge Clk or negedge Rst_n)		// Instrución para resetear el sistema en cualquier ciclo de reloj
 begin
-if (!Rst_n)	State <= IDLE;				//If reset pin is low, we get to the initial state which is IDLE
-else 		State <= Next;				//If not we go to the next state
+	if (!Rst_n)	State <= IDLE;			//Si el reset esta en 0, nos vamos al estado inicial IDLE
+else 		State <= Next;				//De lo contrario seguimos con el proximo estado
 end
 
-
-
-
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////Next step decision//////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-/*This is easy. Each time "State or Rx or RxEn or RxDone" will change their value
-we decide which is the next step. 
-	- Obviously we get to IDLE only when RxDone is high
-meaning that the read process is done.
-	- Also, while we are into IDEL, we get to READ state only if Rx input gets low meaning
-we've detected a start bit*/
+/* LLegamos a IDLE solo cuando RxDone es alto lo que significa que el proceso de lectura está terminado.
+Además, mientras estamos en IDEL, llegamos al estado READ solo si la entrada Rx esta en bajo ( es decir se ha
+detectado el bit de inicio) */
+	
 always @ (State or Rx or RxEn or RxDone)
 begin
     case(State)	
-	IDLE:	if(!Rx & RxEn)		Next = READ;	 //If Rx is low (Start bit detected) we start the read process
+	IDLE:	if(!Rx & RxEn)		Next = READ;	 
 		else			Next = IDLE;
-	READ:	if(RxDone)		Next = IDLE; 	 //If RxDone is high, than we get back to IDLE and wait for Rx input to go low (start bit detect)
+	READ:	if(RxDone)		Next = IDLE; 	 
 		else			Next = READ;
 	default 			Next = IDLE;
     endcase
 end
 
+/////////////////////////// Habilitar lectura o no///////////////////////////////
 
-
-
-
-
-////////////////////////////////////////////////////////////////////////////
-///////////////////////////ENABLE READ OR NOT///////////////////////////////
-////////////////////////////////////////////////////////////////////////////
 always @ (State or RxDone)
 begin
     case (State)
 	READ: begin
-		read_enable <= 1'b1;			//If we are in the Read state, we enable the read process so in the "Tick always" we start getting the bits
+		read_enable <= 1'b1;			//Siempre que estemos en el estado READ, habilitamos el proceso de lectura para obtener los bits de RX con el Tick
 	      end
 	
 	IDLE: begin
-		read_enable <= 1'b0;			//If we get back to IDLE, we desable the read process so the "Tick always" could continue without geting Rx bits
+		read_enable <= 1'b0;			//Siempre que estemos en el estado IDLE, desahabilitamos el proceso de lectura para evitar obtener los bits de RX con el Tick
 	      end
     endcase
 end
