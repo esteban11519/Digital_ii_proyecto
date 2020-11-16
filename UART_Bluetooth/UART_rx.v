@@ -63,56 +63,56 @@ end
 
 
 
-////////////////////////////////////////////////////////////////////////////
-///////////////////////////Read the input data//////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-/*Finally, each time we detect a Tick pulse,we increase a couter.
-- When the counter is 8 (4'b1000) we are in the middle of the start bit
-- When the counter is 16 (4'b1111) we are in the middle of one of the bits
-- We store the data by shifting the Rx input bit into the Read_data register 
-using this line of code: Read_data <= {Rx,Read_data[7:1]};
+
+///////////////////////////Leer el dato de entrada//////////////////////////////
+
+/*
+Cada vez que detectamos un pulso de Tick, aumentamos la variable counter.
+- Cuando el contador es 8 (4'b1000) estamos en el medio del bit de inicio
+- Cuando el contador es 16 (4'b1111) estamos en el medio de uno de los bits
+- Almacenamos los datos cambiando el bit de entrada Rx al registro Read_data
+usando esta línea de código: Read_data <= {Rx, Read_data [7: 1]};
 */
 always @ (posedge Tick)
 
 	begin
 	if (read_enable)
 	begin
-	RxDone <= 1'b0;							//Set the RxDone register to low since the process is still going
-	counter <= counter+1;						//Increase the counter by 1 with each Tick detected
+	RxDone <= 1'b0;							// Establece el registro RxDone en bajo ya que el proceso aún continúa
+	counter <= counter+1;						// Incrementa  counter en 1 con cada Tick detectado
 	
 
-	if ((counter == 4'b1000) & (start_bit))				//Counter is 8? Then we set the start bit to 1. 
+	if ((counter == 4'b1000) & (start_bit))			  // Si el contador es 8, establecemos el bit de inicio en 0. 
 	begin
 	start_bit <= 1'b0;
 	counter <= 4'b0000;
 	end
 
-	if ((counter == 4'b1111) & (!start_bit) & (Bit < NBits))	//We make a loop (8 loops in this case) and we read all 8 bits
+	if ((counter == 4'b1111) & (!start_bit) & (Bit < NBits))	// Hacemos 8 ciclos y leemos los 8 bits
 	begin
 	Bit <= Bit+1;
 	Read_data <= {Rx,Read_data[7:1]};
 	counter <= 4'b0000;
 	end
 	
-	if ((counter == 4'b1111) & (Bit == NBits)  & (Rx))		//Then we count to 16 once again and detect the stop bit (Rx input must be high)
+		if ((counter == 4'b1111) & (Bit == NBits)  & (Rx))	// Contamos hasta 16 una vez más y detectamos el bit de parada (la entrada Rx debe ser alta)
 	begin
 	Bit <= 4'b0000;
 	RxDone <= 1'b1;
 	counter <= 4'b0000;
-	start_bit <= 1'b1;						//We reset all values for next data input and set RxDone to high
+	start_bit <= 1'b1;						// Restablecemos todos los valores para la siguiente entrada de datos y establecemos RxDone en alto
 	end
 	end
-	
-	
-
 end
 
 
-////////////////////////////////////////////////////////////////////////////
-//////////////////////////////Output assign/////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-/*Finally, we assign the Read_data register values to the RxData output and
-that will be our final received value.*/
+
+//////////////////////////////Asignamos la salida/////////////////////////////////
+
+
+/* Finalmente, asignamos los valores del registro Read_data a la salida RxData y
+ese será nuestro valor final recibido. */
+	
 always @ (posedge Clk)
 begin
 
@@ -132,9 +132,6 @@ RxData[7:0] <= {1'b0,1'b0,Read_data[7:2]};
 end
 end
 
-
-
-
-//End of the RX mdoule
+//Fin del modulo RX
 endmodule
 
