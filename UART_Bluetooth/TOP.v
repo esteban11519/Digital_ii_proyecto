@@ -22,10 +22,10 @@ wire 				RxEn				 ;
 wire [3:0]     NBits    		 ;
 wire [15:0]    BaudRate        ; //328; 162 etc... (Read comment in baud rate generator file)
 /////////////////////////////////////////////////////////////////////////////////////////
-assign      TxData=8'b01010101;
+assign      TxData=8'b01010101; //Para probar la transmisión (55)
 assign 		RxEn = 1'b1			;
 assign 		TxEn = 1'b1			;
-assign 		BaudRate = 16'd325; 	//baud rate set to 9600 for the HC-06 bluetooth module. Why 325? (Read comment in baud rate generator file)
+assign 		BaudRate = 16'd326; 	//baud rate set to 9600 for the HC-06 bluetooth module. Why 325? (Read comment in baud rate generator file)
 assign 		NBits = 4'b1000	;	//We send/receive 8 bits
 /////////////////////////////////////////////////////////////////////////////////////////
 
