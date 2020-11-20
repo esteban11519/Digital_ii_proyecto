@@ -1,0 +1,12 @@
+# Sensor Infrarrojo
+
+Este código es un driver para el sensor infrarrojo (cualquier módulo con un solo pin de información), el cual será utilizado como un seguidor de línea con el objetivo de identificar posiciones estratégicas en el laberinto en las que se tomarán fotografías.
+
+## GPIO.v
+
+En este archivo tenemos el código necesario para hacer un triestado, en el que podemos tanto leer como escribir en un pin de acuerdo a nuestras necesidades. Con este módulo, podemos hacer una de las siguientes opciones:
+* Usar un sensor infrarrojo como el [FC-51](https://moviltronics.com/tienda/modulo-sensor-infrarrojo-ir/), calibrar su rango manualmente con su potenciómetro y solo recibir su señal digital para su respectiva interpretación en el procesador.
+* Usar un sensor infrarrojo como el [QTR-1RC](https://moviltronics.com/tienda/sensor-de-reflexion-digital-qtr-1c/), el cual requiere de un pin de lectura y escritura para su funcionamiento. Con este módulo GPIO deberíamos escribir software para el procesador con el cual conseguir la información que necesitamos.
+
+## modulo_ir.v
+En este archivo tenemos un módulo hecho especialmente para el sensor [QTR-1RC](https://moviltronics.com/tienda/sensor-de-reflexion-digital-qtr-1c/). Este sensor se basa en un fototransitor que carga un condensador a medida que detecta luz infrarroja. Este condensador está conectado a un pin que funciona como entrada y salida, la idea detrás de esta configuración es que al establecer este pin en un valor lógico 1, el condensador se descargará, una vez hecho esto, configuramos el pin como una entrada de alta impedancia z, el condensador se cargará en un tiempo determinado por la lectura del fototransistor, por lo que con nuestra entrada, cuando la tensión del condensador supere el valor necesario para leer un 1 lógico, podemos obtener un ancho de pulso el cual nos caracterice la señal que estamos obteniendo. Esto tiene como consecuencia que a partir de este módulo podemos obtener una una salida de 8 bits (por ejemplo) con la cual recolectaremos información más precisa con la que podremos calibrar el sensor por medio del software del procesador. El código de este archivo también se encuentra comentado por si se desea entrar en más detalle.
