@@ -1,7 +1,7 @@
 `timescale 10ns / 1ns
 module buffer_ram_dp#(
 	parameter AW = 15,		 // Cantidad de bits  de la direccion.
-	parameter DW = 12,		 // Cantidad de Bits de los datos.
+	parameter DW = 8,		 // Cantidad de Bits de los datos.
 	// Absolute address in Esteban's computer
 	//parameter imageFILE = "/home/esteban/UNAL/AnalogElectrinicsII/Practices/camara/sources/imagen.men")
 	// Absolute address in Niko's computer
