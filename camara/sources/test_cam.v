@@ -4,6 +4,8 @@ module test_cam
 	//Entradas del test cam
     input wire clk,           	// Board clock: 100 MHz Nexys4DDR.
     input wire rst,	 	// Reset button. Externo
+    input wire CAM_btn,		// Pausar Video
+
 
 	// Salida
     output wire VGA_Hsync_n,  // Horizontal sync output.
@@ -58,9 +60,9 @@ wire [9:0] VGA_posY;			// Determinar la posición de Y del pixel en la pantalla
 Asignación de la información de la salida del driver a la pantalla
 del regisro data_RGB444
 **************************************************************************** */
-assign VGA_R = data_RGB444[11:8]; 	//los 4 bites más significativos corresponden al color ROJO (RED) 
-assign VGA_G = data_RGB444[7:4];  	//los 4 bites siguientes son del color VERDE (GREEN)
-assign VGA_B = data_RGB444[3:0]; 	//los 4 bites menos significativos son del color AZUL(BLUE)
+assign VGA_R = {data_RGB444[7:5],1'b0};	//los 4 bites más significativos corresponden al color ROJO (RED) 
+assign VGA_G = {data_RGB444[4:2],1'b0}; 	//los 4 bites siguientes son del color VERDE (GREEN)
+assign VGA_B = {data_RGB444[1:0],2'b00};	//los 4 bites menos significativos son del color AZUL(BLUE)
 
 
 /* ****************************************************************************
@@ -104,6 +106,7 @@ cam_read #(AW,DW) cam_read
 		.CAM_vsync(CAM_vsync),
 		.CAM_href(CAM_href),
 		.rst(rst),
+		.btn(CAM_btn),
 
 	//outputs
 	
