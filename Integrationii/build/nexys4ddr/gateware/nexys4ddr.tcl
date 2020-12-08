@@ -6,15 +6,15 @@ set_msg_config -id {Common 17-55} -new_severity {Warning}
 
 # Add Sources
 
-read_verilog {/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/module/verilog/camara/camara.v}
-read_verilog {/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/module/verilog/camara/buffer_ram_dp.v}
-read_verilog {/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/module/verilog/camara/cam_read.v}
-read_verilog {/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/module/verilog/camara/VGA_driver.v}
-read_verilog {/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/module/verilog/camara/PLL/clk24_25_nexys4.v}
-read_verilog {/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/module/verilog/camara/PLL/clk24_25_nexys4_0.v}
-read_verilog {/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/module/verilog/camara/PLL/clk24_25_nexys4_clk_wiz.v}
+read_verilog {/home/esteban/UNAL/GitHub/Digital_II/Integrationii/module/verilog/camara/camara.v}
+read_verilog {/home/esteban/UNAL/GitHub/Digital_II/Integrationii/module/verilog/camara/buffer_ram_dp.v}
+read_verilog {/home/esteban/UNAL/GitHub/Digital_II/Integrationii/module/verilog/camara/cam_read.v}
+read_verilog {/home/esteban/UNAL/GitHub/Digital_II/Integrationii/module/verilog/camara/VGA_driver.v}
+read_verilog {/home/esteban/UNAL/GitHub/Digital_II/Integrationii/module/verilog/camara/PLL/clk24_25_nexys4.v}
+read_verilog {/home/esteban/UNAL/GitHub/Digital_II/Integrationii/module/verilog/camara/PLL/clk24_25_nexys4_0.v}
+read_verilog {/home/esteban/UNAL/GitHub/Digital_II/Integrationii/module/verilog/camara/PLL/clk24_25_nexys4_clk_wiz.v}
 read_verilog {/opt/litex/pythondata-cpu-picorv32/pythondata_cpu_picorv32/verilog/picorv32.v}
-read_verilog {/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.v}
+read_verilog {/home/esteban/UNAL/GitHub/Digital_II/Integrationii/build/nexys4ddr/gateware/nexys4ddr.v}
 
 # Add EDIFs
 

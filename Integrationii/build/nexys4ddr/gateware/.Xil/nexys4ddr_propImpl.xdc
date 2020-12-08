@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xdc rfile:../nexys4ddr.xdc id:1 order:EARLY} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/esteban/UNAL/GitHub/Digital_II/Integrationii/build/nexys4ddr/gateware/nexys4ddr.xdc rfile:../nexys4ddr.xdc id:1 order:EARLY} [current_design]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC D4 [get_ports {serial_tx}]
 set_property src_info {type:XDC file:1 line:9 export:INPUT save:INPUT read:READ} [current_design]
