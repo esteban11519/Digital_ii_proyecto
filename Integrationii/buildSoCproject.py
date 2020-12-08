@@ -93,7 +93,7 @@ class BaseSoC(SoCCore):
 		 
 		#camara
 		SoCCore.add_csr(self,"camara_cntrl") # Incluir mapa de memoria
-		#SoCCore.add_interrupt(self,"camara_cntrl")
+		SoCCore.add_interrupt(self,"camara_cntrl")
 		cam_data_in = Cat(*[platform.request("cam_data_in", i) for i in range(8)])		
 		self.submodules.camara_cntrl = camara.Camara(vsync,hsync,vga_red,vga_green,vga_blue,platform.request("cam_xclk"),platform.request("cam_pwdn"),platform.request("cam_pclk"),cam_data_in,platform.request("cam_vsync"),platform.request("cam_href"))
 		

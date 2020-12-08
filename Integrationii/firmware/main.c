@@ -185,7 +185,7 @@ static void rgbled_test(void)
 
 }
 
-
+/*
 static void vga_test(void)
 {
 	int x,y;
@@ -204,7 +204,7 @@ static void vga_test(void)
 		}
 	}
 }
-
+*/
 static void camara_test(void)
 {
 	unsigned short temp2 =0xFF;
@@ -241,8 +241,8 @@ static void console_service(void)
 		display_test();
 	else if(strcmp(token, "rgbled") == 0)
 		rgbled_test();
-	else if(strcmp(token, "vga") == 0)
-		vga_test();
+	//else if(strcmp(token, "vga") == 0)
+	//	vga_test();
 	else if(strcmp(token, "camara") == 0)
 		camara_test();
 	prompt();

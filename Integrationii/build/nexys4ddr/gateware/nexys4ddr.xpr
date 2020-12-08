@@ -6,7 +6,7 @@
 <Project Version="7" Minor="44" Path="/home/esteban/UNAL/AnalogElectrinicsII/Clases/20201206_WP06_SoC_initial_include_verilog/WP06_SoC_initial_include_verilog/SoC_project_includeVerilog/build/nexys4ddr/gateware/nexys4ddr.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="b8a2abdbd29048ff826439e9a9fa9687"/>
+    <Option Name="Id" Val="dc250e85b6614cb3867af0ce3807a973"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
