@@ -46,7 +46,7 @@ module modulo_ir(
     end
     
     // Triestado para el pin de lectura y descarga
-    assign io = (leer) ? 1'bz : descarga; 
+    assign ir_io = (leer) ? 1'bz : descarga; 
     
     always@(posedge clk) begin
         // Reinicio
@@ -79,7 +79,7 @@ module modulo_ir(
             contador = 16'b0;
             ancho_pulso = cont_ancho;
             cont_ancho = 16'b0;
-            reg_distancia = ancho_pulso * 0.1234;
+            reg_distancia = ancho_pulso;
         end
        
     end
